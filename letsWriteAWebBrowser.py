@@ -12,3 +12,4 @@ while True:
 	# Convert bytes to UTF-8 before printing
 	print(data.decode("utf-8"))
 mysock.close()
+
