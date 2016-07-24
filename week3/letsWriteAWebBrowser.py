@@ -3,7 +3,7 @@ mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('www.py4inf.com', 80))
 
 # Send the request as bytes
-mysock.send (b"GET http://www.py4inf.com/code/romeo.txt HTTP/1.0\n\n")
+mysock.send (b"GET http://www.pythonlearn.com/code/intro-short.txt HTTP/1.0\n\n")
 
 while True:
 	data = mysock.recv(512)
