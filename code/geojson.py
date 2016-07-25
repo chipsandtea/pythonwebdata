@@ -1,8 +1,8 @@
 import urllib
 import json
 
-# serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
-serviceurl = 'http://python-data.dr-chuck.net/geojson?'
+serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
+#serviceurl = 'http://python-data.dr-chuck.net/geojson?'
 
 while True:
     address = raw_input('Enter location: ')
@@ -25,7 +25,8 @@ while True:
 
     lat = js["results"][0]["geometry"]["location"]["lat"]
     lng = js["results"][0]["geometry"]["location"]["lng"]
-    print 'lat',lat,'lng',lng
+    longName = js['results'][0]['address_components'][0]['long_name']
+    print 'lat',lat,'lng',lng,'longName',longName
     location = js['results'][0]['formatted_address']
     print location
 
